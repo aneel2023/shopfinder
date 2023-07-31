@@ -2,6 +2,7 @@
     "name": "anee/shopfinder",
     "description": "Magento2 Shopfiner module to add shop list and search shop near to customer.",
     "type": "magento2-module",
+
     "license" : "proprietary",
     "authors": [
         {
@@ -9,8 +10,10 @@
             "email": "developer.anil88@gmail.com"
         }
     ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
-        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
+        "php": ">=7.4",
         "magento/framework": "100.1.*"
     },
     "autoload": {
