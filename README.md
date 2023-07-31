@@ -1,5 +1,5 @@
 ---
-title: README
+title: README FOR SHOPFINDER MODULE
 
 ---
 
