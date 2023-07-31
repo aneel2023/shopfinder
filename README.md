@@ -99,7 +99,7 @@ message that shop can not be deleted and also shop will not be deleted.
     }
 }
 
-### ``updateShopfinderShop - \Anee\Shopfinder\GraphQl\Resolver\UpdateShopfinderShopResolver``
+### ``UpdateShopfinderShop - \Anee\Shopfinder\GraphQl\Resolver\UpdateShopfinderShopResolver``
 This GraphQl Api is used to update the shop data. It will take all data and update the shop.
 
 ## ``UpdateShopfinderShop Request``
