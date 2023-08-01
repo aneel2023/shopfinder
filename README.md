@@ -1,5 +1,5 @@
 ---
-title: README FOR SHOPFINDER MODULE
+title: README For Shopfinder Module
 
 ---
 
@@ -124,3 +124,41 @@ mutation {
         updatedAt
     }
 }
+
+
+## Module Installation
+
+`composer require anee/shopfinder`
+
+If composer downloaded file successfully then run following command on magento root directory:
+`php bin/magento s:up && php bin/magento setup:di:compile && php bin/magento s:s:d -f`
+
+If composer not able to download the module from source then try following:
+
+`composer require "anee/shopfinder ~1.0.0"`
+
+If still facing any issue then download code from git:
+`https://github.com/aneel2023/shopfinder`
+
+Put above downloaded code in ``app/code/Anee/Shopfinder`` directory and execute following command:
+
+`php bin/magento s:up && php bin/magento setup:di:compile && php bin/magento s:s:d -f`
+
+## Run All PHP Unit Tests
+
+1. Copy `dev/tests/unit/phpunit.xml.dist` to `dev/tests/unit/phpunit.xml`
+2. Comment out line 60 -> `<string>allure/allure.config.php</string>`
+3. Run following command from project root directory:
+
+   `vendor/bin/phpunit -c dev/tests/unit/phpunit.xml vendor/anee/shopfinder/Test/Unit/`
+
+## Run All PHP Integration Tests
+
+1. Rename `dev/tests/integration/etc/install-config-mysql.php.dist` to `dev/tests/integration/etc/install-config-mysql.php`
+2. Update `db-host`, `db-user`, `db-password` and `db-name` (Create new db for integration tests)
+3. After creating new db, make sure to run `setup:upgrade and setup:di:coompile commands`
+4. Copy `dev/tests/integration/phpunit.xml.dist` to `dev/integration/unit/phpunit.xml`
+5. Execute `cd dev/tests/integration`
+6. Run following command from above directory:
+
+   `../../../vendor/bin/phpunit ../../../vendor/anee/shopfinder/Test/Integration/`
